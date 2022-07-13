@@ -102,7 +102,9 @@ extension FormDataSource {
 
     private var cellsClasses: [UITableViewCell.Type] {
         [
-            MarketTableViewCell.self
+            MarketTableViewCell.self,
+            HeaderTableViewCell.self,
+            GraphTableViewCell.self
         ]
     }
 }

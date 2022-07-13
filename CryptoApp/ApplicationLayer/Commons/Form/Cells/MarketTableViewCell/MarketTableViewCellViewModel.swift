@@ -7,8 +7,9 @@
 
 import UIKit
 
-final class MarketTableViewCellViewModel: TappableCellViewModelProtocol {
-    let didTapAction: (() -> Void)?
+final class MarketTableViewCellViewModel {
+    let didTapAction: ((Coin) -> Void)
+    let coin: Coin
     let id: String
     let imageUrl: String
     let title: String
@@ -17,19 +18,16 @@ final class MarketTableViewCellViewModel: TappableCellViewModelProtocol {
     let change: String
 
     init(
-        imageUrl: String,
-        title: String,
-        subtitle: String,
-        marketCap: String,
-        change: String,
-        didTapAction: (() -> Void)?
+        coin: Coin,
+        didTapAction: @escaping (Coin) -> Void
     ) {
-        self.id = title
-        self.imageUrl = imageUrl
-        self.title = title
-        self.subtitle = subtitle
-        self.marketCap = marketCap
-        self.change = change
+        self.coin = coin
+        self.id = coin.name
+        self.imageUrl = coin.image
+        self.title = coin.name
+        self.subtitle = coin.symbol
+        self.marketCap = "\(coin.current_price)"
+        self.change = "\(coin.price_change_percentage_24h)"
         self.didTapAction = didTapAction
     }
 }
@@ -49,6 +47,7 @@ extension MarketTableViewCellViewModel: CellViewModelProtocol {
         cell.iconSymbolLabel.text = subtitle
         cell.marketCapLabel.text = marketCap
         cell.changeLabel.text = change
+        cell.didTapActionCallBack = { self.didTapAction(self.coin) }
         
         return cell
     }

@@ -24,19 +24,20 @@ final class AssetsViewControllerFactory: AssetsViewControllerFactoryProtocol {
         let formDataSource = FormDataSource()
         formDataSource.provider = assetsViewController
         
+        let assetsRouter = AssetsRouter(assetDetailsViewControllerFactory: AssetDetailsViewControllerFactory())
+        assetsRouter.viewController = assetsViewController
+        
         let assetsInteractor = AssetsInteractor(service: service)
         assetsInteractor.presenter = AssetsPresenter(
             formDelegate: formDelegate,
             formDataSource: formDataSource,
+            router: assetsRouter,
             assetsViewModelsBuilderFactory: assetsViewModelsBuilderFactory
         )
         
-        let assetsRouter = AssetsRouter()
+        assetsViewController.interactor = assetsInteractor
+        assetsViewController.router = assetsRouter
         
-        assetsViewController.setUp(
-            interactor: assetsInteractor,
-            router: assetsRouter
-        )
         return assetsViewController
     }
 }

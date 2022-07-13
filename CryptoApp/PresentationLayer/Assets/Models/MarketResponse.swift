@@ -14,9 +14,9 @@ struct Coin: Codable {
     let image: String
     let current_price: Float
     let price_change_percentage_24h: Float
-//    let sparkline_in_7d: sparklines
+    let sparkline_in_7d: Sparklines
 }
 
-struct sparklines: Codable {
+struct Sparklines: Codable {
     let price: [Float]
 }

@@ -17,6 +17,7 @@ final class AssetsPresenter: AssetsPresenterProtocol {
     
     var formDelegate: FormDelegateProtocol?
     var formDataSource: FormDataSourceProtocol?
+    var router: AssetsRouterProtocol?
     
     private var builder: AssetsViewModelsBuilderProtocol!
     private var assetsViewModelsBuilderFactory: AssetsViewModelsBuilderFactoryProtocol!
@@ -25,10 +26,12 @@ final class AssetsPresenter: AssetsPresenterProtocol {
     init(
         formDelegate: FormDelegateProtocol,
         formDataSource: FormDataSourceProtocol,
+        router: AssetsRouterProtocol,
         assetsViewModelsBuilderFactory: AssetsViewModelsBuilderFactoryProtocol
     ) {
         self.formDelegate = formDelegate
         self.formDataSource = formDataSource
+        self.router = router
         self.assetsViewModelsBuilderFactory = assetsViewModelsBuilderFactory
     }
     
@@ -38,15 +41,21 @@ final class AssetsPresenter: AssetsPresenterProtocol {
         updateViewModels(coins: coins)
     }
     func interactorDidFailRetriveCoins(_ error: NetworkError) {
+        // TODO: - error pop up
         print(error)
+    }
+}
+
+extension AssetsPresenter: AssetsActionsHandler {
+    func didTap(coin: Coin) {
+        router?.showAssetDetailsScreen(for: coin)
     }
 }
 
 // MARK: - Private Functions
 extension AssetsPresenter {
     private func updateViewModels(coins: [Coin]) {
-//        print(coins)
-        builder = assetsViewModelsBuilderFactory.make()
+        builder = assetsViewModelsBuilderFactory.make(actionsHandler: self)
         viewModels = builder
             .addAssetFields(coins: coins)
             .build()

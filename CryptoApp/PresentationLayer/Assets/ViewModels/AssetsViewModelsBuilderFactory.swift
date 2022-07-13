@@ -8,7 +8,7 @@
 import Foundation
 
 protocol AssetsViewModelsBuilderFactoryProtocol {
-    func make() -> AssetsViewModelsBuilderProtocol
+    func make(actionsHandler: AssetsActionsHandler) -> AssetsViewModelsBuilderProtocol
 }
 
 final class AssetsViewModelsBuilderFactory: AssetsViewModelsBuilderFactoryProtocol {
@@ -20,7 +20,9 @@ final class AssetsViewModelsBuilderFactory: AssetsViewModelsBuilderFactoryProtoc
         self.formBuilderFactory = formBuilderFactory
     }
     
-    func make() -> AssetsViewModelsBuilderProtocol {
-        AssetsViewModelsBuilder(formCellBuilder: formBuilderFactory.make())
+    func make(actionsHandler: AssetsActionsHandler) -> AssetsViewModelsBuilderProtocol {
+        let viewModelsBuilder = AssetsViewModelsBuilder(formCellBuilder: formBuilderFactory.make())
+        viewModelsBuilder.actionsHandler = actionsHandler
+        return viewModelsBuilder
     }
 }

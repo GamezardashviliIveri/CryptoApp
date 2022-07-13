@@ -8,9 +8,14 @@
 import UIKit
 
 class MarketTableViewCell: UITableViewCell {
+    var didTapActionCallBack: (() -> Void)?
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var iconNameLabel: UILabel!
     @IBOutlet weak var iconSymbolLabel: UILabel!
     @IBOutlet weak var marketCapLabel: UILabel!
     @IBOutlet weak var changeLabel: UILabel!
+    
+    @IBAction func didTapAction(_ sender: Any) {
+        didTapActionCallBack?()
+    }
 }

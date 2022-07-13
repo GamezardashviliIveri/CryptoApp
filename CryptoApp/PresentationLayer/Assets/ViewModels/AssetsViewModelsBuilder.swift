@@ -12,7 +12,14 @@ protocol AssetsViewModelsBuilderProtocol {
     func addAssetFields(coins: [Coin]) -> AssetsViewModelsBuilderProtocol
 }
 
+protocol AssetsActionsHandler: AnyObject {
+    func didTap(coin: Coin)
+}
+
+
 final class AssetsViewModelsBuilder: AssetsViewModelsBuilderProtocol {
+    weak var actionsHandler: AssetsActionsHandler?
+
     private let formCellBuilder: FormCellBuilderProtocol
 
     init(
@@ -28,13 +35,9 @@ final class AssetsViewModelsBuilder: AssetsViewModelsBuilderProtocol {
     func addAssetFields(coins: [Coin]) -> AssetsViewModelsBuilderProtocol {
         coins.forEach {
             formCellBuilder.buildMarketTableViewCellViewModel(
-                imageUrl: $0.image,
-                title: $0.name,
-                subtitle: $0.symbol,
-                marketCap: "\($0.current_price)",
-                change: "\($0.price_change_percentage_24h)"
-            ) {
-                print("should move")
+                coin: $0
+            ) { [weak actionsHandler] coin in
+                actionsHandler?.didTap(coin: coin)
             }
         }
         return self

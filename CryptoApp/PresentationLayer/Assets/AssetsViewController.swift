@@ -7,16 +7,9 @@
 
 import UIKit
 
-protocol AssetsViewControllerProtocol: AnyObject {
-    func setUp(
-        interactor: AssetsInteractorProtocol,
-        router: AssetsRouterProtocol,
-        delegate: FormDelegateProtocol,
-        dataSource: FormDataSourceProtocol
-    )
-}
+protocol AssetsViewControllerProtocol: AnyObject {}
 
-final class AssetsViewController: UIViewController, FormDataSourceViewProvider {
+final class AssetsViewController: UIViewController, FormDataSourceViewProvider, AssetsViewControllerProtocol {
     var interactor: AssetsInteractorProtocol?
     var router: AssetsRouterProtocol?
 
@@ -29,14 +22,6 @@ final class AssetsViewController: UIViewController, FormDataSourceViewProvider {
         setUpView()
         setUpTablveView()
         interactor?.loadCoins(offset: 0)
-    }
-    
-    func setUp(
-        interactor: AssetsInteractorProtocol,
-        router: AssetsRouterProtocol
-    ) {
-        self.interactor = interactor
-        self.router = router
     }
 }
 

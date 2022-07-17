@@ -8,7 +8,7 @@
 import Foundation
 
 protocol AssetsPresenterProtocol {
-    func interactorDidRetriveCoins(_ coins: [Coin])
+    func interactorDidRetriveCoins(_ coins: [Coin], shouldScrollToTop: Bool)
     func interactorDidFailRetriveCoins(_ error: NetworkError)
 }
 
@@ -35,11 +35,12 @@ final class AssetsPresenter: AssetsPresenterProtocol {
         self.assetsViewModelsBuilderFactory = assetsViewModelsBuilderFactory
     }
     
-    func interactorDidRetriveCoins(_ coins: [Coin]) {
+    func interactorDidRetriveCoins(_ coins: [Coin], shouldScrollToTop: Bool) {
         formDataSource?.notifyViewDidLoad()
         formDelegate?.notifyViewDidLoad()
-        updateViewModels(coins: coins)
+        updateViewModels(coins: coins, shouldScrollToTop: shouldScrollToTop)
     }
+    
     func interactorDidFailRetriveCoins(_ error: NetworkError) {
         // TODO: - error pop up
         print(error)
@@ -54,12 +55,12 @@ extension AssetsPresenter: AssetsActionsHandler {
 
 // MARK: - Private Functions
 extension AssetsPresenter {
-    private func updateViewModels(coins: [Coin]) {
+    private func updateViewModels(coins: [Coin], shouldScrollToTop: Bool) {
         builder = assetsViewModelsBuilderFactory.make(actionsHandler: self)
         viewModels = builder
             .addAssetFields(coins: coins)
             .build()
         formDelegate?.update(viewModels: viewModels)
-        formDataSource?.update(viewModels: viewModels, viewShouldEndEditing: true)
+        formDataSource?.update(viewModels: viewModels, shouldScrollToTop: shouldScrollToTop)
     }
 }

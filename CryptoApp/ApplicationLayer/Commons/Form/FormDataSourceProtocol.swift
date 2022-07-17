@@ -15,6 +15,6 @@ protocol FormDataSourceProtocol: CellViewModelDelegateProtocol {
    func notifyViewDidLoad()
    func update(
        viewModels: [CellViewModelProtocol],
-       viewShouldEndEditing: Bool
+       shouldScrollToTop: Bool
    )
 }

@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cEv-YY-MVC">
-                        <rect key="frame" x="0.0" y="16" width="427" height="300"/>
+                        <rect key="frame" x="16" y="16" width="395" height="300"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="300" id="9v1-tO-Aj0"/>
@@ -27,9 +27,9 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="cEv-YY-MVC" secondAttribute="trailing" id="GbQ-4H-Wy9"/>
+                    <constraint firstAttribute="trailing" secondItem="cEv-YY-MVC" secondAttribute="trailing" constant="16" id="GbQ-4H-Wy9"/>
                     <constraint firstItem="cEv-YY-MVC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="U19-jX-WeB"/>
-                    <constraint firstItem="cEv-YY-MVC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="fMT-Kr-Ka0"/>
+                    <constraint firstItem="cEv-YY-MVC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="fMT-Kr-Ka0"/>
                     <constraint firstAttribute="bottom" secondItem="cEv-YY-MVC" secondAttribute="bottom" constant="16" id="ksm-cV-bfW"/>
                 </constraints>
             </tableViewCellContentView>

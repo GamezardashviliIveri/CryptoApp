@@ -41,34 +41,19 @@ extension FormDataSource: FormDataSourceProtocol {
 
     func update(
         viewModels: [CellViewModelProtocol],
-        viewShouldEndEditing: Bool
+        shouldScrollToTop: Bool
     ) {
         let responderCell = self.viewModels.first { $0.isFirstResponder }
 
-        if viewShouldEndEditing {
-            provider?.tableView.endEditing(true)
-        }
-
-        let differences = viewModels.difference(from: self.viewModels) { $0.id == $1.id }
-        if self.viewModels.isEmpty || differences.isEmpty {
-            self.viewModels = viewModels
-            return reload(responderCell: responderCell)
-        }
-
-        let inserts: [IndexPath] = differences.insertions.compactMap(index)
-        let deletions: [IndexPath] = differences.removals.compactMap(index)
-
-        provider?.tableView.performBatchUpdates {
-            self.viewModels = viewModels
-            provider?.tableView.deleteRows(at: deletions, with: .automatic)
-            provider?.tableView.insertRows(at: inserts, with: .automatic)
-        } completion: { [weak self] _ in
-            self?.reload(responderCell: responderCell)
-        }
+        self.viewModels = viewModels
+        self.reload(responderCell: responderCell, shouldScrollToTop: shouldScrollToTop)
     }
 
-    private func reload(responderCell: CellViewModelProtocol?) {
+    private func reload(responderCell: CellViewModelProtocol?, shouldScrollToTop: Bool) {
         provider?.tableView.reloadData()
+        if shouldScrollToTop {
+            provider?.tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
+        }
         guard
             let responderCell = responderCell,
             let newResponderCell = viewModels.first(where: { $0.id == responderCell.id })

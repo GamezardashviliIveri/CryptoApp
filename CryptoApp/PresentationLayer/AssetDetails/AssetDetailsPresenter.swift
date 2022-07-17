@@ -50,6 +50,6 @@ extension AssetDetailsPresenter {
             .addGraph(sparkline: coin.sparkline_in_7d.price.map { String($0) })
             .build()
         formDelegate?.update(viewModels: viewModels)
-        formDataSource?.update(viewModels: viewModels, viewShouldEndEditing: true)
+        formDataSource?.update(viewModels: viewModels, shouldScrollToTop: true)
     }
 }

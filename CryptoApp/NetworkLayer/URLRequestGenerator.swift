@@ -13,12 +13,12 @@ enum URLs {
 }
 
 struct URLRequestGenerator {
-    static func getCoins(offset: Int) -> URLRequest {
+    static func getCoins(offset: Int, sortingType: SortingType, page: Int) -> URLRequest {
         let queryItems = [
             URLQueryItem(name: "vs_currency", value: "usd"),
-            URLQueryItem(name: "order", value: "market_cap_desc"),
-            URLQueryItem(name: "per_page", value: "100"),
-            URLQueryItem(name: "page", value: "1"),
+            URLQueryItem(name: "order", value: sortingType.rawValue),
+            URLQueryItem(name: "per_page", value: "30"),
+            URLQueryItem(name: "page", value: "\(page)"),
             URLQueryItem(name: "sparkline", value: "true")
         ]
 

@@ -12,6 +12,7 @@
 		C111542F287B1A1D00F194A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C111542E287B1A1D00F194A3 /* Assets.xcassets */; };
 		C1115432287B1A1D00F194A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1115430287B1A1D00F194A3 /* LaunchScreen.storyboard */; };
 		C111543D287B1A1D00F194A3 /* CryptoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C111543C287B1A1D00F194A3 /* CryptoAppTests.swift */; };
+		C141D2B52883F90B00784356 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C141D2B42883F90B00784356 /* UIColor+Extensions.swift */; };
 		C1DFCE68287BEFFD007AA576 /* AssetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFCE66287BEFFD007AA576 /* AssetsViewController.swift */; };
 		C1DFCE6B287BF0A7007AA576 /* AssetsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1DFCE6A287BF0A7007AA576 /* AssetsViewController.storyboard */; };
 		C1DFCE6D287BF50D007AA576 /* AssetsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFCE6C287BF50D007AA576 /* AssetsInteractor.swift */; };
@@ -86,6 +87,7 @@
 		C1115438287B1A1D00F194A3 /* CryptoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C111543C287B1A1D00F194A3 /* CryptoAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAppTests.swift; sourceTree = "<group>"; };
 		C1115442287B1A1D00F194A3 /* CryptoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C141D2B42883F90B00784356 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		C1DFCE66287BEFFD007AA576 /* AssetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsViewController.swift; sourceTree = "<group>"; };
 		C1DFCE6A287BF0A7007AA576 /* AssetsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AssetsViewController.storyboard; sourceTree = "<group>"; };
 		C1DFCE6C287BF50D007AA576 /* AssetsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsInteractor.swift; sourceTree = "<group>"; };
@@ -208,8 +210,8 @@
 		C1115456287B1AD300F194A3 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
-				C1DFCEAA287CDEBE007AA576 /* AssetDetails */,
 				C1DFCE75287BFD49007AA576 /* Assets */,
+				C1DFCEAA287CDEBE007AA576 /* AssetDetails */,
 			);
 			path = PresentationLayer;
 			sourceTree = "<group>";
@@ -289,6 +291,7 @@
 				C1DFCE96287C1940007AA576 /* UITableView+Helper.swift */,
 				C1DFCEA8287CA698007AA576 /* UIImageView+Extensions.swift */,
 				C1DFCF0F287E90DF007AA576 /* Observable.swift */,
+				C141D2B42883F90B00784356 /* UIColor+Extensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -527,6 +530,7 @@
 				C1DFCE78287C0840007AA576 /* HTTPClient.swift in Sources */,
 				C1DFCE88287C1541007AA576 /* FormDelegateProtocol.swift in Sources */,
 				C1DFCE8C287C15C7007AA576 /* FormDataSourceViewProvider.swift in Sources */,
+				C141D2B52883F90B00784356 /* UIColor+Extensions.swift in Sources */,
 				C1115428287B1A1C00F194A3 /* SceneDelegate.swift in Sources */,
 				C1DFCF10287E90DF007AA576 /* Observable.swift in Sources */,
 				C1DFCEFC287D55FC007AA576 /* AssetDetailsViewModelsBuilderFactory.swift in Sources */,

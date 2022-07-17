@@ -26,8 +26,8 @@ final class MarketTableViewCellViewModel {
         self.imageUrl = coin.image
         self.title = coin.name
         self.subtitle = coin.symbol
-        self.marketCap = "\(coin.current_price)"
-        self.change = "\(coin.price_change_percentage_24h)"
+        self.marketCap = coin.current_price == nil ? "" : "\(coin.current_price!)"
+        self.change = coin.price_change_percentage_24h == nil ? "" : "\(coin.price_change_percentage_24h!)"
         self.didTapAction = didTapAction
     }
 }
@@ -45,8 +45,8 @@ extension MarketTableViewCellViewModel: CellViewModelProtocol {
         cell.iconImageView.imageFromServerURL(imageUrl, placeHolder: nil)
         cell.iconNameLabel.text = title
         cell.iconSymbolLabel.text = subtitle
-        cell.marketCapLabel.text = marketCap
-        cell.changeLabel.text = change
+        cell.marketCapLabel.text = "$\(marketCap)"
+        cell.changeLabel.text = "\(change)%"
         cell.didTapActionCallBack = { self.didTapAction(self.coin) }
         
         return cell

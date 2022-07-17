@@ -13,6 +13,8 @@
 		C1115432287B1A1D00F194A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1115430287B1A1D00F194A3 /* LaunchScreen.storyboard */; };
 		C111543D287B1A1D00F194A3 /* CryptoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C111543C287B1A1D00F194A3 /* CryptoAppTests.swift */; };
 		C141D2B52883F90B00784356 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C141D2B42883F90B00784356 /* UIColor+Extensions.swift */; };
+		C141D2C1288499B000784356 /* AssetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C141D2BF288499B000784356 /* AssetCollectionViewCell.swift */; };
+		C141D2C2288499B000784356 /* AssetCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C141D2C0288499B000784356 /* AssetCollectionViewCell.xib */; };
 		C1DFCE68287BEFFD007AA576 /* AssetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFCE66287BEFFD007AA576 /* AssetsViewController.swift */; };
 		C1DFCE6B287BF0A7007AA576 /* AssetsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1DFCE6A287BF0A7007AA576 /* AssetsViewController.storyboard */; };
 		C1DFCE6D287BF50D007AA576 /* AssetsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFCE6C287BF50D007AA576 /* AssetsInteractor.swift */; };
@@ -88,6 +90,8 @@
 		C111543C287B1A1D00F194A3 /* CryptoAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAppTests.swift; sourceTree = "<group>"; };
 		C1115442287B1A1D00F194A3 /* CryptoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C141D2B42883F90B00784356 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		C141D2BF288499B000784356 /* AssetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCollectionViewCell.swift; sourceTree = "<group>"; };
+		C141D2C0288499B000784356 /* AssetCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssetCollectionViewCell.xib; sourceTree = "<group>"; };
 		C1DFCE66287BEFFD007AA576 /* AssetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsViewController.swift; sourceTree = "<group>"; };
 		C1DFCE6A287BF0A7007AA576 /* AssetsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AssetsViewController.storyboard; sourceTree = "<group>"; };
 		C1DFCE6C287BF50D007AA576 /* AssetsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsInteractor.swift; sourceTree = "<group>"; };
@@ -236,6 +240,15 @@
 			path = NetworkLayer;
 			sourceTree = "<group>";
 		};
+		C141D2B828848B3A00784356 /* AssetCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C141D2BF288499B000784356 /* AssetCollectionViewCell.swift */,
+				C141D2C0288499B000784356 /* AssetCollectionViewCell.xib */,
+			);
+			path = AssetCollectionViewCell;
+			sourceTree = "<group>";
+		};
 		C1DFCE75287BFD49007AA576 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -372,6 +385,7 @@
 		C1DFCF02287E8D57007AA576 /* AssetsTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				C141D2B828848B3A00784356 /* AssetCollectionViewCell */,
 				C1DFCF03287E8E16007AA576 /* AssetsTableViewCell.swift */,
 				C1DFCF04287E8E16007AA576 /* AssetsTableViewCell.xib */,
 				C1DFCF07287E8E81007AA576 /* AssetsTableViewCellViewModel.swift */,
@@ -483,6 +497,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C141D2C2288499B000784356 /* AssetCollectionViewCell.xib in Resources */,
 				C1115432287B1A1D00F194A3 /* LaunchScreen.storyboard in Resources */,
 				C111542F287B1A1D00F194A3 /* Assets.xcassets in Resources */,
 				C1DFCEAC287CDED8007AA576 /* AssetDetailsViewController.storyboard in Resources */,
@@ -554,6 +569,7 @@
 				C1DFCEF0287D5302007AA576 /* HeaderTableViewCell.swift in Sources */,
 				C1DFCE7E287C0854007AA576 /* NetworkError.swift in Sources */,
 				C1DFCE7A287C0847007AA576 /* URLRequestGenerator.swift in Sources */,
+				C141D2C1288499B000784356 /* AssetCollectionViewCell.swift in Sources */,
 				C1DFCEA7287C3DA2007AA576 /* MarketTableViewCellViewModel.swift in Sources */,
 				C1DFCF08287E8E81007AA576 /* AssetsTableViewCellViewModel.swift in Sources */,
 			);

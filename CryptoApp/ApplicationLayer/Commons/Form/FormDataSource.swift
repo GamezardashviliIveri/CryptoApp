@@ -89,7 +89,8 @@ extension FormDataSource {
         [
             MarketTableViewCell.self,
             HeaderTableViewCell.self,
-            GraphTableViewCell.self
+            GraphTableViewCell.self,
+            AssetsTableViewCell.self
         ]
     }
 }

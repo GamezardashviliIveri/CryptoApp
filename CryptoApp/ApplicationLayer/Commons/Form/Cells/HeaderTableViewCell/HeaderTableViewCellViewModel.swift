@@ -9,19 +9,22 @@ import UIKit
 
 final class HeaderTableViewCellViewModel {
     let id: String
+    let imageUrl: String
     let title: String
-    let subtitle: String
-    let change: String
+    let subtitle: Float?
+    let change: Float?
 
     init(
         title: String,
-        subtitle: String,
-        change: String
+        subtitle: Float?,
+        change: Float?,
+        imageUrl: String
     ) {
         self.id = title
         self.title = title
         self.subtitle = subtitle
         self.change = change
+        self.imageUrl = imageUrl
     }
 }
 
@@ -35,9 +38,10 @@ extension HeaderTableViewCellViewModel: CellViewModelProtocol {
             for: indexPath
         ) as! HeaderTableViewCell
         
+        cell.coinImageView.imageFromServerURL(imageUrl, placeHolder: nil)
         cell.titleLabel.text = title
-        cell.subtitleLabel.text = subtitle
-        cell.changeLabel.text = change
+        cell.subtitleLabel.text = subtitle == nil ? "" : "$\(subtitle!)"
+        cell.changeLabel.text = change == nil ? "" : "\(change!)%"
         
         return cell
     }

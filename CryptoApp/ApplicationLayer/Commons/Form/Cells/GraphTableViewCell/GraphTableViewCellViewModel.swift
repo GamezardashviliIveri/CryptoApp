@@ -25,16 +25,19 @@ extension GraphTableViewCellViewModel: CellViewModelProtocol {
             withIdentifier: GraphTableViewCell.reuseIdentifier,
             for: indexPath
         ) as! GraphTableViewCell
-        
+        let dataInDouble = sparkline.map { Double($0)! }
+        let maxValue = dataInDouble.max() ?? 0
+        let minValue = dataInDouble.min() ?? 0
         let normalizedSparkline = Observable(normalize(sparkline))
-        cell.graphView.clipsToBounds = true
-        cell.graphView.layer.borderColor = UIColor.gray.cgColor
-        cell.graphView.layer.borderWidth = 1.0
         
+        cell.graphView.clipsToBounds = true
+        cell.minValueLabel.text = "$\(minValue)"
+        cell.maxValueLabel.text = "$\(maxValue)"
+
         normalizedSparkline.bind { [weak self] values in
             guard let self = self else { return }
             let linePath = self.makeLinePath(points: values, view: cell.graphView)
-            let shapeLayer = self.makeLineShapeLayer(path: linePath, lineColor: .red)
+            let shapeLayer = self.makeLineShapeLayer(path: linePath, lineColor: UIColor(hexValue: 0x00BDB0))
             DispatchQueue.main.async {
                 cell.graphView.layer.sublayers = nil
                 cell.graphView.layer.addSublayer(shapeLayer)

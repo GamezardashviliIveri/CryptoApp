@@ -26,6 +26,7 @@ final class AssetDetailsViewControllerFactory: AssetDetailsViewControllerFactory
         
         let assetDetailsInteractor = AssetDetailsInteractor(service: service)
         assetDetailsInteractor.presenter = AssetDetailsPresenter(
+            viewController: assetDetailsViewController,
             coin: coin,
             formDelegate: formDelegate,
             formDataSource: formDataSource,

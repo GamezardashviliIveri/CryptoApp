@@ -16,10 +16,15 @@ protocol FormCellBuilderProtocol {
     @discardableResult func buildGraphTableViewCellViewModel(
         sparkline: [String]
     ) -> Self
+    @discardableResult func buildAssetsTableViewCellViewModel(
+        coins: [Coin],
+        didReachToTheEndCallBack: @escaping () -> Void
+    ) -> Self
     @discardableResult func buildHeaderTableViewCellViewModel(
         title: String,
-        subtitle: String,
-        change: String
+        subtitle: Float?,
+        change: Float?,
+        imageUrl: String
     ) -> Self
 }
 
@@ -42,6 +47,15 @@ final class FormCellBuilder: FormCellBuilderProtocol {
         return self
     }
     
+    func buildAssetsTableViewCellViewModel(
+        coins: [Coin],
+        didReachToTheEndCallBack: @escaping () -> Void
+    ) -> Self {
+        let viewModel = AssetsTableViewCellViewModel(coins: coins, didReachToTheEndCallBack: didReachToTheEndCallBack)
+        viewModels.append(viewModel)
+        return self
+    }
+    
     func buildMarketTableViewCellViewModel(
         coin: Coin,
         didTapAction: @escaping (Coin) -> Void
@@ -56,13 +70,15 @@ final class FormCellBuilder: FormCellBuilderProtocol {
     
     func buildHeaderTableViewCellViewModel(
         title: String,
-        subtitle: String,
-        change: String
+        subtitle: Float?,
+        change: Float?,
+        imageUrl: String
     ) -> Self {
         let viewModel = HeaderTableViewCellViewModel(
             title: title,
             subtitle: subtitle,
-            change: change
+            change: change,
+            imageUrl: imageUrl
         )
         viewModels.append(viewModel)
         return self

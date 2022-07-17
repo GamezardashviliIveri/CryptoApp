@@ -7,11 +7,14 @@
 
 import UIKit
 
-protocol AssetDetailsViewControllerProtocol: AnyObject {}
+protocol AssetDetailsViewControllerProtocol: AnyObject {
+    func didReachToTheEnd()
+}
 
 class AssetDetailsViewController: UIViewController, FormDataSourceViewProvider, AssetDetailsViewControllerProtocol {
+    private var page = 1
+    
     var interactor: AssetDetailsInteractorProtocol?
-
     var tableView = UITableView()
     
     @IBOutlet weak var tableViewHolder: UIView!
@@ -19,7 +22,12 @@ class AssetDetailsViewController: UIViewController, FormDataSourceViewProvider, 
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTablveView()
-        interactor?.viewDidLoad()
+        interactor?.viewDidLoad(page: page)
+    }
+    
+    func didReachToTheEnd() {
+        page += 1
+        interactor?.viewDidLoad(page: page)
     }
 }
 
@@ -28,6 +36,7 @@ class AssetDetailsViewController: UIViewController, FormDataSourceViewProvider, 
 extension AssetDetailsViewController {
     private func setUpTablveView() {
         tableViewHolder.addSubview(tableView)
+        tableView.backgroundColor = .clear
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.topAnchor.constraint(equalTo: tableViewHolder.topAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: tableViewHolder.bottomAnchor).isActive = true

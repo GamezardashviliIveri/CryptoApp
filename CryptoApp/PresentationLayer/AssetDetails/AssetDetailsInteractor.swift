@@ -29,8 +29,7 @@ final class AssetDetailsInteractor: AssetDetailsInteractorProtocol {
                     self?.coins.append(contentsOf: data)
                     self?.presenter?.viewDidLoad(coins: self?.coins ?? [])
                 case .failure(let error):
-                    print(error)
-//                    self?.presenter?.interactorDidFailRetriveCoins(error)
+                    self?.presenter?.interactorDidFailRetriveCoins(error: error)
                 }
             }
         }

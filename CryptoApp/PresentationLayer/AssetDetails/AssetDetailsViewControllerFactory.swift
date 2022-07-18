@@ -26,9 +26,13 @@ final class AssetDetailsViewControllerFactory: AssetDetailsViewControllerFactory
         let formDataSource = FormDataSource()
         formDataSource.provider = assetDetailsViewController
         
+        let assetDetailsRouter = AssetDetailsRouter()
+        assetDetailsRouter.viewController = assetDetailsViewController
+        
         let assetDetailsInteractor = AssetDetailsInteractor(service: service)
         assetDetailsInteractor.presenter = AssetDetailsPresenter(
             viewController: assetDetailsViewController,
+            router: assetDetailsRouter,
             coin: coin,
             formDelegate: formDelegate,
             formDataSource: formDataSource,

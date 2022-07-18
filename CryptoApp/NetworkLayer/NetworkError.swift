@@ -12,3 +12,14 @@ enum NetworkError: Error {
     case invalidResponseCode
     case invalidData
 }
+
+extension NetworkError: LocalizedError {
+    var errorDescription: String? {
+        switch self {
+        case .connectivity:
+            return "connection error"
+        case .invalidResponseCode, .invalidData:
+            return "something went wrong"
+        }
+    }
+}

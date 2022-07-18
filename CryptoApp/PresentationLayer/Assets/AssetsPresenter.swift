@@ -42,8 +42,7 @@ final class AssetsPresenter: AssetsPresenterProtocol {
     }
     
     func interactorDidFailRetriveCoins(_ error: NetworkError) {
-        // TODO: - error pop up
-        print(error)
+        router?.presentError(error: error)
     }
 }
 

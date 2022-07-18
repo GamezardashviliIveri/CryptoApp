@@ -9,6 +9,7 @@ import Foundation
 
 protocol AssetDetailsPresenterProtocol {
     func viewDidLoad(coins: [Coin])
+    func interactorDidFailRetriveCoins(error: NetworkError)
 }
 
 final class AssetDetailsPresenter: AssetDetailsPresenterProtocol {
@@ -16,6 +17,7 @@ final class AssetDetailsPresenter: AssetDetailsPresenterProtocol {
     
     var formDelegate: FormDelegateProtocol!
     var formDataSource: FormDataSourceProtocol!
+    var router: AssetDetailsRouterProtocol!
     
     private var builder: AssetDetailsViewModelsBuilderProtocol!
     private var assetDetailsViewModelsBuilderFactory: AssetDetailsViewModelsBuilderFactoryProtocol!
@@ -24,12 +26,14 @@ final class AssetDetailsPresenter: AssetDetailsPresenterProtocol {
     
     init(
         viewController: AssetDetailsViewControllerProtocol,
+        router: AssetDetailsRouterProtocol,
         coin: Coin,
         formDelegate: FormDelegateProtocol,
         formDataSource: FormDataSourceProtocol,
         assetDetailsViewModelsBuilderFactory: AssetDetailsViewModelsBuilderFactoryProtocol
     ) {
         self.viewController = viewController
+        self.router = router
         self.coin = coin
         self.formDelegate = formDelegate
         self.formDataSource = formDataSource
@@ -40,6 +44,10 @@ final class AssetDetailsPresenter: AssetDetailsPresenterProtocol {
         formDataSource.notifyViewDidLoad()
         formDelegate.notifyViewDidLoad()
         updateViewModels(coins: coins)
+    }
+    
+    func interactorDidFailRetriveCoins(error: NetworkError) {
+        router.presentError(error: error)
     }
 }
 

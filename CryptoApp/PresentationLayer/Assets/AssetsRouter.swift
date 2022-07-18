@@ -9,6 +9,7 @@ import UIKit
 
 protocol AssetsRouterProtocol {
     func showAssetDetailsScreen(for: Coin)
+    func presentError(error: NetworkError)
 }
 
 final class AssetsRouter: AssetsRouterProtocol {
@@ -22,5 +23,11 @@ final class AssetsRouter: AssetsRouterProtocol {
     func showAssetDetailsScreen(for coin: Coin) {
         let assetDetailsViewController = assetDetailsViewControllerFactory.make(coin: coin)
         self.viewController.navigationController?.pushViewController(assetDetailsViewController, animated: true)
+    }
+    
+    func presentError(error: NetworkError) {
+        let alert = UIAlertController(title: "Error", message: error.errorDescription, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "ok", style: .default, handler: nil))
+        self.viewController.navigationController?.present(alert, animated: false)
     }
 }

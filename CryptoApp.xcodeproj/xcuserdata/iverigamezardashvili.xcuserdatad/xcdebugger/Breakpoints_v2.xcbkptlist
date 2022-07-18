@@ -3,4 +3,150 @@
    uuid = "8FB434BB-0012-4253-BCD1-8DC08CDCC42E"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C34DA97D-A7A7-4703-A3B2-80C74F870F06"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CryptoApp/PresentationLayer/Assets/AssetsInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "loadCoins(offset:sortingType:page:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C34DA97D-A7A7-4703-A3B2-80C74F870F06 - 7bde1957a23afe07"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;Swift.Array&lt;CryptoApp.Coin&gt;, CryptoApp.NetworkError&gt;) -&gt; () in CryptoApp.AssetsInteractor.loadCoins(offset: Swift.Int, sortingType: CryptoApp.SortingType, page: Swift.Int) -&gt; ()"
+                  moduleName = "CryptoApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iverigamezardashvili/Documents/GitHub/CryptoApp/CryptoApp/PresentationLayer/Assets/AssetsInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "160">
+               </Location>
+               <Location
+                  uuid = "C34DA97D-A7A7-4703-A3B2-80C74F870F06 - 4b13a7852c59d0c3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;Swift.Array&lt;CryptoAppTests.Coin&gt;, CryptoAppTests.NetworkError&gt;) -&gt; () in CryptoAppTests.AssetsInteractor.loadCoins(offset: Swift.Int, sortingType: CryptoAppTests.SortingType, page: Swift.Int) -&gt; ()"
+                  moduleName = "CryptoAppTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iverigamezardashvili/Documents/GitHub/CryptoApp/CryptoApp/PresentationLayer/Assets/AssetsInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "160">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EC2CE00C-1506-466A-ADC7-EA7D6FB51568"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CryptoApp/PresentationLayer/Assets/AssetsInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "loadCoins(offset:sortingType:page:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EC2CE00C-1506-466A-ADC7-EA7D6FB51568 - 7bde1957a23afbd2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;Swift.Array&lt;CryptoApp.Coin&gt;, CryptoApp.NetworkError&gt;) -&gt; () in CryptoApp.AssetsInteractor.loadCoins(offset: Swift.Int, sortingType: CryptoApp.SortingType, page: Swift.Int) -&gt; ()"
+                  moduleName = "CryptoApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iverigamezardashvili/Documents/GitHub/CryptoApp/CryptoApp/PresentationLayer/Assets/AssetsInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "3912">
+               </Location>
+               <Location
+                  uuid = "EC2CE00C-1506-466A-ADC7-EA7D6FB51568 - 4b13a7852c59d516"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;Swift.Array&lt;CryptoAppTests.Coin&gt;, CryptoAppTests.NetworkError&gt;) -&gt; () in CryptoAppTests.AssetsInteractor.loadCoins(offset: Swift.Int, sortingType: CryptoAppTests.SortingType, page: Swift.Int) -&gt; ()"
+                  moduleName = "CryptoAppTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iverigamezardashvili/Documents/GitHub/CryptoApp/CryptoApp/PresentationLayer/Assets/AssetsInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "3912">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D0F13420-26D2-4457-AF0E-BCCF37DE4BE0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CryptoApp/PresentationLayer/Assets/AssetsInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "loadCoins(offset:sortingType:page:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D0F13420-26D2-4457-AF0E-BCCF37DE4BE0 - c3dedcae7bff4f0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;CryptoApp.Coin&gt;, CryptoApp.NetworkError&gt;) -&gt; () in CryptoApp.AssetsInteractor.loadCoins(offset: Swift.Int, sortingType: CryptoApp.SortingType, page: Swift.Int) -&gt; ()"
+                  moduleName = "CryptoApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iverigamezardashvili/Documents/GitHub/CryptoApp/CryptoApp/PresentationLayer/Assets/AssetsInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "308">
+               </Location>
+               <Location
+                  uuid = "D0F13420-26D2-4457-AF0E-BCCF37DE4BE0 - 97ad99c62ae6775f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;Swift.Array&lt;CryptoAppTests.Coin&gt;, CryptoAppTests.NetworkError&gt;) -&gt; () in CryptoAppTests.AssetsInteractor.loadCoins(offset: Swift.Int, sortingType: CryptoAppTests.SortingType, page: Swift.Int) -&gt; ()"
+                  moduleName = "CryptoAppTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/iverigamezardashvili/Documents/GitHub/CryptoApp/CryptoApp/PresentationLayer/Assets/AssetsInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "308">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

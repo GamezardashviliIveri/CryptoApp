@@ -11,13 +11,68 @@
 		C1115428287B1A1C00F194A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1115427287B1A1C00F194A3 /* SceneDelegate.swift */; };
 		C111542F287B1A1D00F194A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C111542E287B1A1D00F194A3 /* Assets.xcassets */; };
 		C1115432287B1A1D00F194A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1115430287B1A1D00F194A3 /* LaunchScreen.storyboard */; };
-		C111543D287B1A1D00F194A3 /* CryptoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C111543C287B1A1D00F194A3 /* CryptoAppTests.swift */; };
 		C141D2B52883F90B00784356 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C141D2B42883F90B00784356 /* UIColor+Extensions.swift */; };
 		C141D2C1288499B000784356 /* AssetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C141D2BF288499B000784356 /* AssetCollectionViewCell.swift */; };
 		C141D2C2288499B000784356 /* AssetCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C141D2C0288499B000784356 /* AssetCollectionViewCell.xib */; };
 		C141D2C428850D8900784356 /* DynamicColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C141D2C328850D8900784356 /* DynamicColor.swift */; };
 		C141D2C628850E0200784356 /* ColorToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = C141D2C528850E0200784356 /* ColorToken.swift */; };
 		C141D2C82885101A00784356 /* DynamicColorsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C141D2C72885101A00784356 /* DynamicColorsProvider.swift */; };
+		C141D2CD28851E5D00784356 /* AssetsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C141D2CC28851E5D00784356 /* AssetsInteractorTests.swift */; };
+		C141D2CF28851ED100784356 /* MockNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C141D2CE28851ED100784356 /* MockNetworkService.swift */; };
+		C141D2D028851EE700784356 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFCE77287C0840007AA576 /* HTTPClient.swift */; };
+		C141D2D128851F1700784356 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFCE7D287C0854007AA576 /* NetworkError.swift */; };
+		C141D2D328851F9700784356 /* MockNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C141D2CE28851ED100784356 /* MockNetworkService.swift */; };
+		C19350DB288521230058C8C1 /* AssetsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFCE6F287BF523007AA576 /* AssetsPresenter.swift */; };
+		C19350DC288521280058C8C1 /* MarketResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFCE80287C122B007AA576 /* MarketResponse.swift */; };
+		C19350DD288521360058C8C1 /* AssetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFCE66287BEFFD007AA576 /* AssetsViewController.swift */; };
+		C19350DE2885213C0058C8C1 /* FormDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFCE87287C1541007AA576 /* FormDelegateProtocol.swift */; };
+		C19350DF288521410058C8C1 /* AssetsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFCE71287BF52E007AA576 /* AssetsRouter.swift */; };
+		C19350E0288521460058C8C1 /* AssetDetailsViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFCEFD287D566C007AA576 /* AssetDetailsViewControllerFactory.swift */; };
+		C19350E12885214E0058C8C1 /* CellViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFCE89287C1562007AA576 /* CellViewModelProtocol.swift */; };
+		C19350E32885215B0058C8C1 /* UITableView+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFCE96287C1940007AA576 /* UITableView+Helper.swift */; };
+		C19350E42885215F0058C8C1 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFCEA8287CA698007AA576 /* UIImageView+Extensions.swift */; };
+		C19350E9288521670058C8C1 /* DynamicColorsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C141D2C72885101A00784356 /* DynamicColorsProvider.swift */; };
+		C19350EA288521670058C8C1 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C141D2B42883F90B00784356 /* UIColor+Extensions.swift */; };
+		C19350EB288521670058C8C1 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFCF0F287E90DF007AA576 /* Observable.swift */; };
+		C19350EC288521670058C8C1 /* DynamicColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C141D2C328850D8900784356 /* DynamicColor.swift */; };
+		C19350ED288521670058C8C1 /* ColorToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = C141D2C528850E0200784356 /* ColorToken.swift */; };
+		C19350EE288521820058C8C1 /* HeaderTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFCEF2287D530D007AA576 /* HeaderTableViewCellViewModel.swift */; };
+		C19350EF288521820058C8C1 /* FormDataSourceViewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFCE8B287C15C7007AA576 /* FormDataSourceViewProvider.swift */; };
+		C19350F0288521820058C8C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1115425287B1A1C00F194A3 /* AppDelegate.swift */; };
+		C19350F1288521820058C8C1 /* AssetsViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFCE73287BF54E007AA576 /* AssetsViewControllerFactory.swift */; };
+		C19350F2288521820058C8C1 /* FormDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFCE84287C14FE007AA576 /* FormDelegate.swift */; };
+		C19350F3288521820058C8C1 /* URLRequestGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFCE79287C0847007AA576 /* URLRequestGenerator.swift */; };
+		C19350F4288521820058C8C1 /* FormCellBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFCE9E287C3B4A007AA576 /* FormCellBuilder.swift */; };
+		C19350F5288521820058C8C1 /* AssetsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFCF03287E8E16007AA576 /* AssetsTableViewCell.swift */; };
+		C19350F6288521820058C8C1 /* AssetDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFCEFF287E85E9007AA576 /* AssetDetailsRouter.swift */; };
+		C19350F7288521820058C8C1 /* AssetDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFCEAD287CDEE6007AA576 /* AssetDetailsViewController.swift */; };
+		C19350F8288521820058C8C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1115427287B1A1C00F194A3 /* SceneDelegate.swift */; };
+		C19350F9288521820058C8C1 /* AssetDetailsViewModelsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFCEF9287D55F1007AA576 /* AssetDetailsViewModelsBuilder.swift */; };
+		C19350FA288521820058C8C1 /* GraphTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFCF0D287E8FD0007AA576 /* GraphTableViewCellViewModel.swift */; };
+		C19350FB288521820058C8C1 /* AssetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C141D2BF288499B000784356 /* AssetCollectionViewCell.swift */; };
+		C19350FC288521820058C8C1 /* TappableCellViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFCE8D287C1614007AA576 /* TappableCellViewModelProtocol.swift */; };
+		C19350FD288521820058C8C1 /* FormDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFCE93287C18AA007AA576 /* FormDataSourceProtocol.swift */; };
+		C19350FE288521820058C8C1 /* AssetDetailsViewModelsBuilderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFCEFB287D55FC007AA576 /* AssetDetailsViewModelsBuilderFactory.swift */; };
+		C19350FF288521820058C8C1 /* FormCellBuilderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFCEA0287C3C61007AA576 /* FormCellBuilderFactory.swift */; };
+		C1935100288521820058C8C1 /* AssetDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFCEF6287D55CA007AA576 /* AssetDetailsPresenter.swift */; };
+		C1935101288521820058C8C1 /* MarketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFCEA2287C3D5B007AA576 /* MarketTableViewCell.swift */; };
+		C1935102288521820058C8C1 /* FormDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFCE8F287C17BE007AA576 /* FormDataSource.swift */; };
+		C1935103288521820058C8C1 /* AssetsTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFCF07287E8E81007AA576 /* AssetsTableViewCellViewModel.swift */; };
+		C1935104288521820058C8C1 /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFCEEE287D5302007AA576 /* HeaderTableViewCell.swift */; };
+		C1935105288521820058C8C1 /* AssetDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFCEF4287D55BF007AA576 /* AssetDetailsInteractor.swift */; };
+		C1935106288521820058C8C1 /* GraphTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFCF09287E8F14007AA576 /* GraphTableViewCell.swift */; };
+		C19351072885218E0058C8C1 /* AssetsViewModelsBuilderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFCE9A287C3A29007AA576 /* AssetsViewModelsBuilderFactory.swift */; };
+		C19351082885219C0058C8C1 /* AssetsViewModelsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFCE9C287C3A32007AA576 /* AssetsViewModelsBuilder.swift */; };
+		C1935109288521A70058C8C1 /* MarketTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFCEA6287C3DA2007AA576 /* MarketTableViewCellViewModel.swift */; };
+		C193510C288521FF0058C8C1 /* MockAssetsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C193510B288521FF0058C8C1 /* MockAssetsPresenter.swift */; };
+		C193510E2885255C0058C8C1 /* AssetsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C193510D2885255C0058C8C1 /* AssetsPresenterTests.swift */; };
+		C1935110288525BE0058C8C1 /* MockFormDelegateProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C193510F288525BE0058C8C1 /* MockFormDelegateProtocol.swift */; };
+		C1935112288525DC0058C8C1 /* MockAssetsRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1935111288525DC0058C8C1 /* MockAssetsRouterProtocol.swift */; };
+		C1935114288525ED0058C8C1 /* MockAssetsViewModelsBuilderFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1935113288525ED0058C8C1 /* MockAssetsViewModelsBuilderFactoryProtocol.swift */; };
+		C1935117288528FB0058C8C1 /* AssetDetailsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1935116288528FB0058C8C1 /* AssetDetailsPresenterTests.swift */; };
+		C193511A2885294E0058C8C1 /* MockAssetDetailsViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19351192885294E0058C8C1 /* MockAssetDetailsViewControllerProtocol.swift */; };
+		C193511C288529660058C8C1 /* MockAssetDetailsRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C193511B288529660058C8C1 /* MockAssetDetailsRouterProtocol.swift */; };
+		C19351202885298E0058C8C1 /* MockAssetDetailsViewModelsBuilderFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C193511F2885298E0058C8C1 /* MockAssetDetailsViewModelsBuilderFactoryProtocol.swift */; };
 		C1DFCE68287BEFFD007AA576 /* AssetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFCE66287BEFFD007AA576 /* AssetsViewController.swift */; };
 		C1DFCE6B287BF0A7007AA576 /* AssetsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1DFCE6A287BF0A7007AA576 /* AssetsViewController.storyboard */; };
 		C1DFCE6D287BF50D007AA576 /* AssetsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DFCE6C287BF50D007AA576 /* AssetsInteractor.swift */; };
@@ -73,13 +128,6 @@
 			remoteGlobalIDString = C1115421287B1A1C00F194A3;
 			remoteInfo = CryptoApp;
 		};
-		C1115443287B1A1D00F194A3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C111541A287B1A1C00F194A3 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C1115421287B1A1C00F194A3;
-			remoteInfo = CryptoApp;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -90,14 +138,23 @@
 		C1115431287B1A1D00F194A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C1115433287B1A1D00F194A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1115438287B1A1D00F194A3 /* CryptoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C111543C287B1A1D00F194A3 /* CryptoAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAppTests.swift; sourceTree = "<group>"; };
-		C1115442287B1A1D00F194A3 /* CryptoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C141D2B42883F90B00784356 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		C141D2BF288499B000784356 /* AssetCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetCollectionViewCell.swift; sourceTree = "<group>"; };
 		C141D2C0288499B000784356 /* AssetCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssetCollectionViewCell.xib; sourceTree = "<group>"; };
 		C141D2C328850D8900784356 /* DynamicColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicColor.swift; sourceTree = "<group>"; };
 		C141D2C528850E0200784356 /* ColorToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorToken.swift; sourceTree = "<group>"; };
 		C141D2C72885101A00784356 /* DynamicColorsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicColorsProvider.swift; sourceTree = "<group>"; };
+		C141D2CC28851E5D00784356 /* AssetsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsInteractorTests.swift; sourceTree = "<group>"; };
+		C141D2CE28851ED100784356 /* MockNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkService.swift; sourceTree = "<group>"; };
+		C193510B288521FF0058C8C1 /* MockAssetsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAssetsPresenter.swift; sourceTree = "<group>"; };
+		C193510D2885255C0058C8C1 /* AssetsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsPresenterTests.swift; sourceTree = "<group>"; };
+		C193510F288525BE0058C8C1 /* MockFormDelegateProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFormDelegateProtocol.swift; sourceTree = "<group>"; };
+		C1935111288525DC0058C8C1 /* MockAssetsRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAssetsRouterProtocol.swift; sourceTree = "<group>"; };
+		C1935113288525ED0058C8C1 /* MockAssetsViewModelsBuilderFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAssetsViewModelsBuilderFactoryProtocol.swift; sourceTree = "<group>"; };
+		C1935116288528FB0058C8C1 /* AssetDetailsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetDetailsPresenterTests.swift; sourceTree = "<group>"; };
+		C19351192885294E0058C8C1 /* MockAssetDetailsViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAssetDetailsViewControllerProtocol.swift; sourceTree = "<group>"; };
+		C193511B288529660058C8C1 /* MockAssetDetailsRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAssetDetailsRouterProtocol.swift; sourceTree = "<group>"; };
+		C193511F2885298E0058C8C1 /* MockAssetDetailsViewModelsBuilderFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAssetDetailsViewModelsBuilderFactoryProtocol.swift; sourceTree = "<group>"; };
 		C1DFCE66287BEFFD007AA576 /* AssetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsViewController.swift; sourceTree = "<group>"; };
 		C1DFCE6A287BF0A7007AA576 /* AssetsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AssetsViewController.storyboard; sourceTree = "<group>"; };
 		C1DFCE6C287BF50D007AA576 /* AssetsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsInteractor.swift; sourceTree = "<group>"; };
@@ -159,13 +216,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C111543F287B1A1D00F194A3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -183,7 +233,6 @@
 			children = (
 				C1115422287B1A1C00F194A3 /* CryptoApp.app */,
 				C1115438287B1A1D00F194A3 /* CryptoAppTests.xctest */,
-				C1115442287B1A1D00F194A3 /* CryptoAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -202,7 +251,9 @@
 		C111543B287B1A1D00F194A3 /* CryptoAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				C111543C287B1A1D00F194A3 /* CryptoAppTests.swift */,
+				C141D2CB28851E4900784356 /* CommonMocks */,
+				C141D2CA28851E1E00784356 /* AssetsScreenTests */,
+				C1935115288528D30058C8C1 /* AssetDetailsScreenTests */,
 			);
 			path = CryptoAppTests;
 			sourceTree = "<group>";
@@ -253,6 +304,54 @@
 				C141D2C0288499B000784356 /* AssetCollectionViewCell.xib */,
 			);
 			path = AssetCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		C141D2CA28851E1E00784356 /* AssetsScreenTests */ = {
+			isa = PBXGroup;
+			children = (
+				C193510A288521F10058C8C1 /* Mocks */,
+				C193510D2885255C0058C8C1 /* AssetsPresenterTests.swift */,
+				C141D2CC28851E5D00784356 /* AssetsInteractorTests.swift */,
+			);
+			path = AssetsScreenTests;
+			sourceTree = "<group>";
+		};
+		C141D2CB28851E4900784356 /* CommonMocks */ = {
+			isa = PBXGroup;
+			children = (
+				C141D2CE28851ED100784356 /* MockNetworkService.swift */,
+				C193510F288525BE0058C8C1 /* MockFormDelegateProtocol.swift */,
+				C1935111288525DC0058C8C1 /* MockAssetsRouterProtocol.swift */,
+				C1935113288525ED0058C8C1 /* MockAssetsViewModelsBuilderFactoryProtocol.swift */,
+			);
+			path = CommonMocks;
+			sourceTree = "<group>";
+		};
+		C193510A288521F10058C8C1 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				C193510B288521FF0058C8C1 /* MockAssetsPresenter.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		C1935115288528D30058C8C1 /* AssetDetailsScreenTests */ = {
+			isa = PBXGroup;
+			children = (
+				C19351182885293E0058C8C1 /* Mocks */,
+				C1935116288528FB0058C8C1 /* AssetDetailsPresenterTests.swift */,
+			);
+			path = AssetDetailsScreenTests;
+			sourceTree = "<group>";
+		};
+		C19351182885293E0058C8C1 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				C19351192885294E0058C8C1 /* MockAssetDetailsViewControllerProtocol.swift */,
+				C193511B288529660058C8C1 /* MockAssetDetailsRouterProtocol.swift */,
+				C193511F2885298E0058C8C1 /* MockAssetDetailsViewModelsBuilderFactoryProtocol.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		C1DFCE75287BFD49007AA576 /* Assets */ = {
@@ -440,24 +539,6 @@
 			productReference = C1115438287B1A1D00F194A3 /* CryptoAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		C1115441287B1A1D00F194A3 /* CryptoAppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C1115452287B1A1D00F194A3 /* Build configuration list for PBXNativeTarget "CryptoAppUITests" */;
-			buildPhases = (
-				C111543E287B1A1D00F194A3 /* Sources */,
-				C111543F287B1A1D00F194A3 /* Frameworks */,
-				C1115440287B1A1D00F194A3 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C1115444287B1A1D00F194A3 /* PBXTargetDependency */,
-			);
-			name = CryptoAppUITests;
-			productName = CryptoAppUITests;
-			productReference = C1115442287B1A1D00F194A3 /* CryptoAppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -472,10 +553,6 @@
 						CreatedOnToolsVersion = 13.3;
 					};
 					C1115437287B1A1D00F194A3 = {
-						CreatedOnToolsVersion = 13.3;
-						TestTargetID = C1115421287B1A1C00F194A3;
-					};
-					C1115441287B1A1D00F194A3 = {
 						CreatedOnToolsVersion = 13.3;
 						TestTargetID = C1115421287B1A1C00F194A3;
 					};
@@ -496,7 +573,6 @@
 			targets = (
 				C1115421287B1A1C00F194A3 /* CryptoApp */,
 				C1115437287B1A1D00F194A3 /* CryptoAppTests */,
-				C1115441287B1A1D00F194A3 /* CryptoAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -519,13 +595,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C1115436287B1A1D00F194A3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C1115440287B1A1D00F194A3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -569,6 +638,7 @@
 				C1DFCEA1287C3C61007AA576 /* FormCellBuilderFactory.swift in Sources */,
 				C1DFCE72287BF52E007AA576 /* AssetsRouter.swift in Sources */,
 				C1DFCE68287BEFFD007AA576 /* AssetsViewController.swift in Sources */,
+				C141D2D328851F9700784356 /* MockNetworkService.swift in Sources */,
 				C1DFCEFE287D566C007AA576 /* AssetDetailsViewControllerFactory.swift in Sources */,
 				C1DFCE8A287C1562007AA576 /* CellViewModelProtocol.swift in Sources */,
 				C1DFCE6D287BF50D007AA576 /* AssetsInteractor.swift in Sources */,
@@ -591,15 +661,62 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C111543D287B1A1D00F194A3 /* CryptoAppTests.swift in Sources */,
+				C1935117288528FB0058C8C1 /* AssetDetailsPresenterTests.swift in Sources */,
+				C19350F3288521820058C8C1 /* URLRequestGenerator.swift in Sources */,
+				C19350F0288521820058C8C1 /* AppDelegate.swift in Sources */,
+				C19350F5288521820058C8C1 /* AssetsTableViewCell.swift in Sources */,
+				C19350E42885215F0058C8C1 /* UIImageView+Extensions.swift in Sources */,
+				C141D2CF28851ED100784356 /* MockNetworkService.swift in Sources */,
+				C1935112288525DC0058C8C1 /* MockAssetsRouterProtocol.swift in Sources */,
+				C19350F8288521820058C8C1 /* SceneDelegate.swift in Sources */,
+				C1935100288521820058C8C1 /* AssetDetailsPresenter.swift in Sources */,
+				C141D2D028851EE700784356 /* HTTPClient.swift in Sources */,
+				C19350F9288521820058C8C1 /* AssetDetailsViewModelsBuilder.swift in Sources */,
+				C19350FF288521820058C8C1 /* FormCellBuilderFactory.swift in Sources */,
+				C1935104288521820058C8C1 /* HeaderTableViewCell.swift in Sources */,
+				C19350E0288521460058C8C1 /* AssetDetailsViewControllerFactory.swift in Sources */,
+				C141D2CD28851E5D00784356 /* AssetsInteractorTests.swift in Sources */,
+				C1935103288521820058C8C1 /* AssetsTableViewCellViewModel.swift in Sources */,
+				C1935109288521A70058C8C1 /* MarketTableViewCellViewModel.swift in Sources */,
+				C19350F1288521820058C8C1 /* AssetsViewControllerFactory.swift in Sources */,
+				C19350E32885215B0058C8C1 /* UITableView+Helper.swift in Sources */,
+				C19350E12885214E0058C8C1 /* CellViewModelProtocol.swift in Sources */,
+				C1935110288525BE0058C8C1 /* MockFormDelegateProtocol.swift in Sources */,
+				C1935114288525ED0058C8C1 /* MockAssetsViewModelsBuilderFactoryProtocol.swift in Sources */,
+				C19350EC288521670058C8C1 /* DynamicColor.swift in Sources */,
+				C19350DE2885213C0058C8C1 /* FormDelegateProtocol.swift in Sources */,
+				C141D2D128851F1700784356 /* NetworkError.swift in Sources */,
+				C1935106288521820058C8C1 /* GraphTableViewCell.swift in Sources */,
+				C19350F2288521820058C8C1 /* FormDelegate.swift in Sources */,
+				C19350DC288521280058C8C1 /* MarketResponse.swift in Sources */,
 				C1DFCE6E287BF513007AA576 /* AssetsInteractor.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C111543E287B1A1D00F194A3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				C19350FC288521820058C8C1 /* TappableCellViewModelProtocol.swift in Sources */,
+				C19350EF288521820058C8C1 /* FormDataSourceViewProvider.swift in Sources */,
+				C19350FE288521820058C8C1 /* AssetDetailsViewModelsBuilderFactory.swift in Sources */,
+				C19350F4288521820058C8C1 /* FormCellBuilder.swift in Sources */,
+				C19351202885298E0058C8C1 /* MockAssetDetailsViewModelsBuilderFactoryProtocol.swift in Sources */,
+				C19350FB288521820058C8C1 /* AssetCollectionViewCell.swift in Sources */,
+				C193511A2885294E0058C8C1 /* MockAssetDetailsViewControllerProtocol.swift in Sources */,
+				C19351072885218E0058C8C1 /* AssetsViewModelsBuilderFactory.swift in Sources */,
+				C19350EA288521670058C8C1 /* UIColor+Extensions.swift in Sources */,
+				C19350EE288521820058C8C1 /* HeaderTableViewCellViewModel.swift in Sources */,
+				C19350FA288521820058C8C1 /* GraphTableViewCellViewModel.swift in Sources */,
+				C19350EB288521670058C8C1 /* Observable.swift in Sources */,
+				C1935105288521820058C8C1 /* AssetDetailsInteractor.swift in Sources */,
+				C1935102288521820058C8C1 /* FormDataSource.swift in Sources */,
+				C19350ED288521670058C8C1 /* ColorToken.swift in Sources */,
+				C19350E9288521670058C8C1 /* DynamicColorsProvider.swift in Sources */,
+				C1935101288521820058C8C1 /* MarketTableViewCell.swift in Sources */,
+				C19350DF288521410058C8C1 /* AssetsRouter.swift in Sources */,
+				C193511C288529660058C8C1 /* MockAssetDetailsRouterProtocol.swift in Sources */,
+				C193510C288521FF0058C8C1 /* MockAssetsPresenter.swift in Sources */,
+				C19350DB288521230058C8C1 /* AssetsPresenter.swift in Sources */,
+				C19351082885219C0058C8C1 /* AssetsViewModelsBuilder.swift in Sources */,
+				C193510E2885255C0058C8C1 /* AssetsPresenterTests.swift in Sources */,
+				C19350F6288521820058C8C1 /* AssetDetailsRouter.swift in Sources */,
+				C19350FD288521820058C8C1 /* FormDataSourceProtocol.swift in Sources */,
+				C19350F7288521820058C8C1 /* AssetDetailsViewController.swift in Sources */,
+				C19350DD288521360058C8C1 /* AssetsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -610,11 +727,6 @@
 			isa = PBXTargetDependency;
 			target = C1115421287B1A1C00F194A3 /* CryptoApp */;
 			targetProxy = C1115439287B1A1D00F194A3 /* PBXContainerItemProxy */;
-		};
-		C1115444287B1A1D00F194A3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C1115421287B1A1C00F194A3 /* CryptoApp */;
-			targetProxy = C1115443287B1A1D00F194A3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -842,42 +954,6 @@
 			};
 			name = Release;
 		};
-		C1115453287B1A1D00F194A3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 954PA854ZF;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = iveri.CryptoAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CryptoApp;
-			};
-			name = Debug;
-		};
-		C1115454287B1A1D00F194A3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 954PA854ZF;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = iveri.CryptoAppUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CryptoApp;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -904,15 +980,6 @@
 			buildConfigurations = (
 				C1115450287B1A1D00F194A3 /* Debug */,
 				C1115451287B1A1D00F194A3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C1115452287B1A1D00F194A3 /* Build configuration list for PBXNativeTarget "CryptoAppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C1115453287B1A1D00F194A3 /* Debug */,
-				C1115454287B1A1D00F194A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

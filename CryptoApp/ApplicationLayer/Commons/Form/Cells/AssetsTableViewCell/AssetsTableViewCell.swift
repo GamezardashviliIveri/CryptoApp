@@ -13,7 +13,9 @@ protocol AssetsTableViewCellDelegate: AnyObject {
 
 class AssetsTableViewCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var assetsLabel: UILabel!
     weak var delegate: AssetsTableViewCellDelegate?
+    var dynamicColorsProvider: DynamicColorsProviderProtocol?
     var coins = [Coin]()
     
     override func awakeFromNib() {
@@ -35,6 +37,7 @@ extension AssetsTableViewCell: UICollectionViewDataSource, UICollectionViewDeleg
         let coin = coins[indexPath.row]
         cell.coinImageView.imageFromServerURL(coin.image, placeHolder: nil)
         cell.nameLabel.text = coin.name
+        cell.contentHolderView.backgroundColor = dynamicColorsProvider?.cardBackground.uiColor
         cell.symbolLabel.text = coin.symbol
         cell.priceLabel.text = coin.current_price == nil ? nil : "$\(coin.current_price!)"
         return cell

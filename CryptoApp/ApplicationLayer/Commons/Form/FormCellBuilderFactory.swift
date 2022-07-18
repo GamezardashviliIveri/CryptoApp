@@ -12,7 +12,12 @@ protocol FormCellBuilderFactoryProtocol {
 }
 
 final class FormCellBuilderFactory: FormCellBuilderFactoryProtocol {
+    private let dynamicColorsProvider: DynamicColorsProviderProtocol
+    
+    init(dynamicColorsProvider: DynamicColorsProviderProtocol) {
+        self.dynamicColorsProvider = dynamicColorsProvider
+    }
     func make() -> FormCellBuilderProtocol {
-        FormCellBuilder()
+        FormCellBuilder(dynamicColorsProvider: dynamicColorsProvider)
     }
 }

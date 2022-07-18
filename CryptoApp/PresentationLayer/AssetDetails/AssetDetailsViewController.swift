@@ -16,7 +16,8 @@ class AssetDetailsViewController: UIViewController, FormDataSourceViewProvider, 
     
     var interactor: AssetDetailsInteractorProtocol?
     var tableView = UITableView()
-    
+    var dynamicColorsProvider: DynamicColorsProviderProtocol?
+
     @IBOutlet weak var tableViewHolder: UIView!
     
     override func viewDidLoad() {
@@ -36,6 +37,7 @@ class AssetDetailsViewController: UIViewController, FormDataSourceViewProvider, 
 extension AssetDetailsViewController {
     private func setUpTablveView() {
         tableViewHolder.addSubview(tableView)
+        view.backgroundColor = dynamicColorsProvider?.viewBackground.uiColor
         tableView.backgroundColor = .clear
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.topAnchor.constraint(equalTo: tableViewHolder.topAnchor).isActive = true

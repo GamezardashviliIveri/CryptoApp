@@ -10,9 +10,14 @@ import UIKit
 final class GraphTableViewCellViewModel {
     let id: String = "GraphTableViewCellViewModel"
     let sparkline: [String]
+    let dynamicColorsProvider: DynamicColorsProviderProtocol
     
-    init(sparkline: [String]) {
+    init(
+        sparkline: [String],
+        dynamicColorsProvider: DynamicColorsProviderProtocol
+    ) {
         self.sparkline = sparkline
+        self.dynamicColorsProvider = dynamicColorsProvider
     }
 }
 
@@ -37,7 +42,7 @@ extension GraphTableViewCellViewModel: CellViewModelProtocol {
         normalizedSparkline.bind { [weak self] values in
             guard let self = self else { return }
             let linePath = self.makeLinePath(points: values, view: cell.graphView)
-            let shapeLayer = self.makeLineShapeLayer(path: linePath, lineColor: UIColor(hexValue: 0x00BDB0))
+            let shapeLayer = self.makeLineShapeLayer(path: linePath, lineColor: self.dynamicColorsProvider.highlight.uiColor)
             DispatchQueue.main.async {
                 cell.graphView.layer.sublayers = nil
                 cell.graphView.layer.addSublayer(shapeLayer)

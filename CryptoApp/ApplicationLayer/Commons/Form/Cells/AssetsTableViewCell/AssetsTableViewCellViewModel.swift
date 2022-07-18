@@ -10,13 +10,16 @@ import UIKit
 final class AssetsTableViewCellViewModel {
     let id: String = "AssetsTableViewCellViewModel"
     let coins: [Coin]
+    let dynamicColorsProvider: DynamicColorsProviderProtocol
     let didReachToTheEndCallBack: () -> Void
 
     init(
         coins: [Coin],
+        dynamicColorsProvider: DynamicColorsProviderProtocol,
         didReachToTheEndCallBack: @escaping () -> Void
     ) {
         self.coins = coins
+        self.dynamicColorsProvider = dynamicColorsProvider
         self.didReachToTheEndCallBack = didReachToTheEndCallBack
     }
 }
@@ -34,7 +37,9 @@ extension AssetsTableViewCellViewModel: CellViewModelProtocol {
         ) as! AssetsTableViewCell
         
         cell.collectionView.register(UINib(nibName: "AssetCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "AssetCollectionViewCell")
+        cell.assetsLabel.textColor = dynamicColorsProvider.labelColor.uiColor
         cell.coins = coins
+        cell.dynamicColorsProvider = dynamicColorsProvider
         cell.collectionView.reloadData()
         cell.delegate = self
 

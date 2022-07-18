@@ -17,7 +17,9 @@ final class AssetDetailsViewControllerFactory: AssetDetailsViewControllerFactory
             return UIViewController()
         }
         let service = HTTPClient()
-        let assetDetailsViewModelsBuilderFactory = AssetDetailsViewModelsBuilderFactory(formBuilderFactory: FormCellBuilderFactory())
+        let dynamicColorsProvider = DynamicColorsProvider()
+
+        let assetDetailsViewModelsBuilderFactory = AssetDetailsViewModelsBuilderFactory(formBuilderFactory: FormCellBuilderFactory(dynamicColorsProvider: dynamicColorsProvider))
         let formDelegate = FormDelegate()
         formDelegate.provider = assetDetailsViewController
         
@@ -33,6 +35,7 @@ final class AssetDetailsViewControllerFactory: AssetDetailsViewControllerFactory
             assetDetailsViewModelsBuilderFactory: assetDetailsViewModelsBuilderFactory
         )
         assetDetailsViewController.interactor = assetDetailsInteractor
+        assetDetailsViewController.dynamicColorsProvider = dynamicColorsProvider
         return assetDetailsViewController
     }
 }

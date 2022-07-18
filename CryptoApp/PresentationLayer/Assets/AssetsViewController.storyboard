@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rQY-BV-uhd" userLabel="SortingButtonsHolderVIew">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rQY-BV-uhd" userLabel="sortingButtonsHolderVIew">
                                 <rect key="frame" x="0.0" y="52" width="414" height="52.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5GS-Jr-39f" userLabel="MarketCapView">
@@ -68,7 +68,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="zFj-RF-cSD" firstAttribute="leading" secondItem="Xlx-XR-jBg" secondAttribute="leading" constant="8" id="5XD-mi-DX4"/>
                                             <constraint firstAttribute="trailing" secondItem="YF6-OY-hbF" secondAttribute="trailing" id="Jvx-3q-kkC"/>
@@ -98,7 +98,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="4Tf-wJ-M6W" secondAttribute="trailing" constant="8" id="3a3-eC-3Cd"/>
                                             <constraint firstItem="lzB-Tj-GHU" firstAttribute="top" secondItem="Qxp-ow-wy1" secondAttribute="top" id="Hat-Tr-ppe"/>
@@ -161,7 +161,9 @@
                     <connections>
                         <outlet property="marketCapView" destination="5GS-Jr-39f" id="rKt-gK-jkJ"/>
                         <outlet property="nameView" destination="Qxp-ow-wy1" id="YHJ-Cx-qvY"/>
+                        <outlet property="sortingButtonsHolderVIew" destination="rQY-BV-uhd" id="1mE-7o-JTh"/>
                         <outlet property="tableViewHolder" destination="PlB-SD-mtJ" id="GsN-Ab-e0t"/>
+                        <outlet property="topView" destination="AcB-mC-SQK" id="cng-qa-b0D"/>
                         <outlet property="volumeView" destination="Xlx-XR-jBg" id="tba-87-fj3"/>
                     </connections>
                 </viewController>

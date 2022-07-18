@@ -30,8 +30,11 @@ protocol FormCellBuilderProtocol {
 
 final class FormCellBuilder: FormCellBuilderProtocol {
     private var viewModels = [CellViewModelProtocol]()
+    private var dynamicColorsProvider: DynamicColorsProviderProtocol!
 
-    init() {}
+    init(dynamicColorsProvider: DynamicColorsProviderProtocol) {
+        self.dynamicColorsProvider = dynamicColorsProvider
+    }
     
     func build() -> [CellViewModelProtocol] {
         viewModels
@@ -41,7 +44,8 @@ final class FormCellBuilder: FormCellBuilderProtocol {
         sparkline: [String]
     ) -> Self {
         let viewModel = GraphTableViewCellViewModel(
-            sparkline: sparkline
+            sparkline: sparkline,
+            dynamicColorsProvider: dynamicColorsProvider
         )
         viewModels.append(viewModel)
         return self
@@ -51,7 +55,7 @@ final class FormCellBuilder: FormCellBuilderProtocol {
         coins: [Coin],
         didReachToTheEndCallBack: @escaping () -> Void
     ) -> Self {
-        let viewModel = AssetsTableViewCellViewModel(coins: coins, didReachToTheEndCallBack: didReachToTheEndCallBack)
+        let viewModel = AssetsTableViewCellViewModel(coins: coins, dynamicColorsProvider: dynamicColorsProvider, didReachToTheEndCallBack: didReachToTheEndCallBack)
         viewModels.append(viewModel)
         return self
     }
@@ -62,6 +66,7 @@ final class FormCellBuilder: FormCellBuilderProtocol {
     ) -> Self {
         let viewModel = MarketTableViewCellViewModel(
             coin: coin,
+            dynamicColorsProvider: dynamicColorsProvider,
             didTapAction: didTapAction
         )
         viewModels.append(viewModel)

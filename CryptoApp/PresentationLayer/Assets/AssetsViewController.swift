@@ -10,12 +10,15 @@ import UIKit
 protocol AssetsViewControllerProtocol: AnyObject {}
 
 final class AssetsViewController: UIViewController, FormDataSourceViewProvider, AssetsViewControllerProtocol {
+    @IBOutlet weak var sortingButtonsHolderVIew: UIView!
+    @IBOutlet weak var topView: UIView!
     @IBOutlet weak var marketCapView: UIView!
     @IBOutlet weak var volumeView: UIView!
     @IBOutlet weak var nameView: UIView!
     
     var interactor: AssetsInteractorProtocol?
     var router: AssetsRouterProtocol?
+    var dynamicColorsProvider: DynamicColorsProviderProtocol?
 
     var tableView = UITableView()
     private var currentSortingType = SortingType.market
@@ -39,7 +42,7 @@ final class AssetsViewController: UIViewController, FormDataSourceViewProvider, 
     
     @IBAction private func didSelectMarketCap(_ sender: Any) {
         guard currentSortingType != .market else { return }
-        marketCapView.backgroundColor = UIColor(hexValue: 0x00BDB0)
+        marketCapView.backgroundColor = dynamicColorsProvider?.highlight.uiColor
         volumeView.backgroundColor = .clear
         nameView.backgroundColor = .clear
         currentSortingType = .market
@@ -50,7 +53,7 @@ final class AssetsViewController: UIViewController, FormDataSourceViewProvider, 
     @IBAction private func didSelectVolume(_ sender: Any) {
         guard currentSortingType != .volume else { return }
         marketCapView.backgroundColor = .clear
-        volumeView.backgroundColor = UIColor(hexValue: 0x00BDB0)
+        volumeView.backgroundColor = dynamicColorsProvider?.highlight.uiColor
         nameView.backgroundColor = .clear
         currentSortingType = .volume
         bottomReachedSortingType = .none
@@ -61,7 +64,7 @@ final class AssetsViewController: UIViewController, FormDataSourceViewProvider, 
         guard currentSortingType != .name else { return }
         marketCapView.backgroundColor = .clear
         volumeView.backgroundColor = .clear
-        nameView.backgroundColor = UIColor(hexValue: 0x00BDB0)
+        nameView.backgroundColor = dynamicColorsProvider?.highlight.uiColor
         currentSortingType = .name
         bottomReachedSortingType = .none
         interactor?.loadCoins(offset: 0, sortingType: .name, page: 1)
@@ -73,6 +76,9 @@ final class AssetsViewController: UIViewController, FormDataSourceViewProvider, 
 extension AssetsViewController {
     private func setUpView() {
         title = "Market"
+        view.backgroundColor = dynamicColorsProvider?.viewBackground.uiColor
+        sortingButtonsHolderVIew.backgroundColor = dynamicColorsProvider?.cardBackground.uiColor
+        topView.backgroundColor = dynamicColorsProvider?.cardBackground.uiColor
         marketCapView.layer.cornerRadius = 8
         volumeView.layer.cornerRadius = 8
         nameView.layer.cornerRadius = 8

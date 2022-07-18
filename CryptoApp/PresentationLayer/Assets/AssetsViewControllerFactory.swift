@@ -17,7 +17,9 @@ final class AssetsViewControllerFactory: AssetsViewControllerFactoryProtocol {
             return UIViewController()
         }
         let service = HTTPClient()
-        let assetsViewModelsBuilderFactory = AssetsViewModelsBuilderFactory(formBuilderFactory: FormCellBuilderFactory())
+        let dynamicColorsProvider = DynamicColorsProvider()
+
+        let assetsViewModelsBuilderFactory = AssetsViewModelsBuilderFactory(formBuilderFactory: FormCellBuilderFactory(dynamicColorsProvider: dynamicColorsProvider))
         let formDelegate = FormDelegate()
         formDelegate.provider = assetsViewController
         
@@ -37,6 +39,7 @@ final class AssetsViewControllerFactory: AssetsViewControllerFactoryProtocol {
         
         assetsViewController.interactor = assetsInteractor
         assetsViewController.router = assetsRouter
+        assetsViewController.dynamicColorsProvider = dynamicColorsProvider
         
         return assetsViewController
     }

@@ -10,6 +10,7 @@ import UIKit
 final class MarketTableViewCellViewModel {
     let didTapAction: ((Coin) -> Void)
     let coin: Coin
+    let dynamicColorsProvider: DynamicColorsProviderProtocol
     let id: String
     let imageUrl: String
     let title: String
@@ -19,9 +20,11 @@ final class MarketTableViewCellViewModel {
 
     init(
         coin: Coin,
+        dynamicColorsProvider: DynamicColorsProviderProtocol,
         didTapAction: @escaping (Coin) -> Void
     ) {
         self.coin = coin
+        self.dynamicColorsProvider = dynamicColorsProvider
         self.id = coin.name
         self.imageUrl = coin.image
         self.title = coin.name
@@ -42,6 +45,7 @@ extension MarketTableViewCellViewModel: CellViewModelProtocol {
             for: indexPath
         ) as! MarketTableViewCell
         
+        cell.contentHolderView.backgroundColor = dynamicColorsProvider.cardBackground.uiColor
         cell.iconImageView.imageFromServerURL(imageUrl, placeHolder: nil)
         cell.iconNameLabel.text = title
         cell.iconSymbolLabel.text = subtitle

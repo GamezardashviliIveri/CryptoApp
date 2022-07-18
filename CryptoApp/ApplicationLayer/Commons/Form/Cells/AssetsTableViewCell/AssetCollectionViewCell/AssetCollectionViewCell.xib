@@ -28,7 +28,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="JPv-Cg-fFd" firstAttribute="top" secondItem="VTa-eN-ZYx" secondAttribute="top" id="HEQ-6e-YQn"/>
                                     <constraint firstAttribute="height" constant="40" id="JRZ-B0-Gb5"/>
